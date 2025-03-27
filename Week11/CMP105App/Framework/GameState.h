@@ -14,7 +14,12 @@ public:
 	void setCurrentState(State s);
 	// Returns the current state.
 	State getCurrentState();
+	//sets restart
+	void setRestart(bool r);
+	//returns restart
+	bool getRestart();
 
 protected:
 	State currentState;
+	bool restart = false;
 };

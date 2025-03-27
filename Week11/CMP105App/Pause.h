@@ -7,22 +7,19 @@
 #include "Framework/GameState.h"
 #include <string>
 #include <iostream>
-#include "Bee.h"
 
 
-class Level : public BaseLevel{
+class Pause : public BaseLevel {
 public:
-	Level(sf::RenderWindow* hwnd, Input* in, GameState* gs, AudioManager* aud);
-	~Level();
+	Pause(sf::RenderWindow* hwnd, Input* in, GameState* gs, AudioManager* aud);
+	~Pause();
 
 	void handleInput(float dt) override;
 	void update(float dt) override;
 	void render();
-	void onBegin();
 
 private:
 	// Default variables for level class.
-	sf::RectangleShape LevelBG;
-	sf::Texture LevelTex;
-	Bee Bee;
+	sf::RectangleShape BG;
+	sf::Texture BGTex;
 };
